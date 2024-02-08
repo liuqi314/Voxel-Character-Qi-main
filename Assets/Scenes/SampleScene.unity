@@ -3945,7 +3945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 19d9536635af54544aba353e64f90573, type: 3}
       propertyPath: m_Name
-      value: PlayerModel2
+      value: PlayerModel
       objectReference: {fileID: 0}
     - target: {fileID: 2106145266610383287, guid: 19d9536635af54544aba353e64f90573, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5800,7 +5800,7 @@ GameObject:
   - component: {fileID: 1730694590}
   - component: {fileID: 1730694589}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5899,8 +5899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   rotateSpeed: 4
-  myRigidbody: {fileID: 0}
-  myAnim: {fileID: 1067696769}
+  myRigidbody: {fileID: 1730694588}
+  myAnim: {fileID: 1730694589}
 --- !u!1 &1781515750
 GameObject:
   m_ObjectHideFlags: 0
