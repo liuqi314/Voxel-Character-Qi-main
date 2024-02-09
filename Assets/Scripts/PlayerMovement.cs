@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
 
-public class PlayerMovement : BaseMovent
+public class PlayerMovement : BaseMovement
 {
     [SerializeField]
 
-    private AnimationControler myAnim;
+    private AnimatorController myAnim;
 
     private Vector3 tempMovement;
 
@@ -57,7 +57,7 @@ public class PlayerMovement : BaseMovent
                 float rot = Mathf.Atan2(-tempMovement.z, tempMovement.x) * Mathf.Rad2Deg + 90f;
                 transform.rotation = Quaternion.Euler(0f, rot, 0f);
 
-                transform.rotation = Quaternion.Euler(0f, rot, 0f);
+          
             }
              
             else

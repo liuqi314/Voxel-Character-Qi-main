@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
-public class BaseMovent : MonoBehaviour
+public class BaseMovement : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed;
@@ -33,7 +33,7 @@ public class BaseMovent : MonoBehaviour
 
     public void Move(Vector3 moveDirection)
     {
-        myRigidbody.velocity = moveDirection * moveSpeed;  
+        myRigidbody.velocity = moveDirection.normalized * moveSpeed;  
 
     }
    
