@@ -16,8 +16,12 @@ public class AnimatorController : MonoBehaviour
     {
         anim.SetBool(key, newValue);
     }
+    // Method to trigger animation via trigger parameter
+    public void ChangeAnimTrigger(string triggerName)
+    {
+        anim.SetTrigger(triggerName);
+    }
 
 
 
-   
 }

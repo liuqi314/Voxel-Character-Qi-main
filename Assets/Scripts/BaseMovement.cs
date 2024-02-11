@@ -6,14 +6,15 @@ using UnityEngine;
 
 public class BaseMovement : MonoBehaviour
 {
+
+
     [SerializeField]
     private float moveSpeed;
     [SerializeField]
     private float rotateSpeed;
+    protected Rigidbody myRigidbody;
 
-    [Header("References")]
-    [SerializeField]
-    private Rigidbody myRigidbody;
+    
 
      
     // Start is called before the first frame update
@@ -21,8 +22,9 @@ public class BaseMovement : MonoBehaviour
     
     
     {
-
-       if (!myRigidbody)
+        myRigidbody = GetComponent<Rigidbody>();
+        
+        if (!myRigidbody)
         {
             myRigidbody = GetComponent<Rigidbody>();
 

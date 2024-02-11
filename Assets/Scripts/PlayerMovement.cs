@@ -11,8 +11,9 @@ public class PlayerMovement : BaseMovement
 
     private Vector3 tempMovement;
 
+    // Added variable for jump force
+    [SerializeField] private float jumpForce;
 
-    
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +27,12 @@ public class PlayerMovement : BaseMovement
         tempMovement = Input.GetAxis("Horizontal") * Camera.main.transform.right + Input.GetAxis("Vertical") * Camera.main.transform.forward;
         tempMovement.y = 0f; // Ensure no vertical movement
 
+        // Check for jump input
+        if (Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
 
-  
     }
     void FixedUpdate()
     {
@@ -67,6 +72,15 @@ public class PlayerMovement : BaseMovement
         }
 
     }
+    // Function to handle jumping
+    private void Jump()
+    {
+        myRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        myAnim.ChangeAnimTrigger("Jump");
+    }
+
+
+
 
 }
 
